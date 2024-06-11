@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <p></p>
+  <script>
+    // Get the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const content = urlParams.get('content');
+    const webhook = urlParams.get('webhook');
+    const parag = document.querySelector('p');
+
+    // Check if content and webhook are present
+    if (!content || !webhook) {
+      const msg = "No webhook or content params. How to use (example): (endpoint)/webhook?content=Hello!&webhook=https://discord.com/api/webhooks/1234567890/abcdefghijklmnopqrstuvwxyz";
+      parag.textContent = msg;
+      // Remove the return statement here
+    }
+
+    // Create the request payload
+    const payload = {
+      content: content
+    };
+
+    // Send the message to the Discord webhook
+    fetch(webhook, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(response => {
+      if (response.ok) {
+        const msg = "Sent";
+        parag.textContent = msg;
+      } else {
+        parag.textContent = "Failed";
+      }
+    })
+    .catch(error => {
+      parag.textContent = 'Error: ' + error;
+    });
+  </script>
+</body>
+</html>
