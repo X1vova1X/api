@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body onload="displayRandomJoke()">
+  <div id="joke"></div>
+
+  <script>
+    // Joke data
+    const jokes = [
+      "Why don't scientists trust atoms? Because they make up everything.",
+      "What do you call a fake noodle? An Impasta.",
+      "Why can't a bicycle stand up by itself? It's two tired.",
+      "What do you call a bear with no teeth? A gummy bear.",
+      "Why can't a nose be 12 inches long? Because then it would be a foot.",
+      "What do you call a pig that does karate? A pork chop.",
+      "Why did the kid throw his clock out the window? Because he wanted to see time fly.",
+      "What do you call a bear with no socks? A bare bear.",
+      "Why did the tomato turn red? Because it saw the salad dressing!",
+      "What do you call a fish wearing a bowtie? Sofishticated.",
+      "Why did the picture go to jail? Because it was framed.",
+      "What do you call a dog magician? A labracadabrador.",
+      "Why did the math book sad? Because of all of its problems!",
+      "What do you call a bear with no teeth? A gummy bear.",
+      "Why did the cookie go to the doctor? Because it felt crumby!",
+      "What do you call a fake noodle? An Impasta.",
+      "Why did the chicken cross the road? To get to the other side!",
+      "What do you call a pig that does karate? A pork chop.",
+      "Why did the kid throw his clock out the window? Because he wanted to see time fly.",
+      "What do you call a bear with no socks? A bare bear.",
+      "Why did the tomato turn red? Because it saw the salad dressing!",
+      "What do you call a fish wearing a bowtie? Sofishticated.",
+      "Why did the picture go to jail? Because it was framed.",
+      "What do you call a dog magician? A labracadabrador.",
+      "Why did the math book sad? Because of all of its problems!",
+      "What do you call a bear with no teeth? A gummy bear.",
+      "Why did the cookie go to the doctor? Because it felt crumby!",
+      "What do you call a fake noodle? An Impasta.",
+      "Why did the chicken cross the road? To get to the other side!",
+      "What do you call a pig that does karate? A pork chop.",
+      "Why did the kid throw his clock out the window? Because he wanted to see time fly.",
+      "What do you call a bear with no socks? A bare bear.",
+      "Why did the tomato turn red? Because it saw the salad dressing!",
+      "What do you call a fish wearing a bowtie? Sofishticated.",
+      "Why did the picture go to jail? Because it was framed.",
+      "What do you call a dog magician? A labracadabrador.",
+      "Why did the math book sad? Because of all of its problems!",
+      "What do you call a bear with no teeth? A gummy bear.",
+      "Why did the cookie go to the doctor? Because it felt crumby!",
+      "What do you call a fake noodle? An Impasta.",
+      "Why did the chicken cross the road? To get to the other side!",
+      "What do you call a pig that does karate? A pork chop.",
+      "What do you call a boomerang that doesn't come back? A stick.",
+      "Why did the scarecrow win an award? Because he was outstanding in his field.",
+      "What do you call a fish wearing sunglasses? A goldfish.",
+      "Why did the bicycle fall over? Because it was two-tired!",
+      "What do you call a fake map? A Scam!",
+      "Why did the student eat their homework? Because the teacher said it was a piece of cake!",
+      "What do you call a fake noodle? An Impasta.",
+      "Why did the kid throw the clock out the window? Because he wanted to see time fly!",
+      "What do you call a bear with no teeth? A gummy bear.",
+      "Why did the tomato turn red? Because it saw the salad dressing!",
+      "What do you call a fish wearing a bowtie? Sofishticated.",
+      "Why did the picture go to jail? Because it was framed.",
+      "What do you call a dog magician? A labracadabrador.",
+      "Why did the math book sad? Because of all of its problems!",
+      "What do you call a bear with no teeth? A gummy bear.",
+      "Why did the cookie go to the doctor? Because it felt crumby!"
+    ];
+
+    function displayRandomJoke() {
+      const randomIndex = Math.floor(Math.random() * jokes.length);
+      const jokeElement = document.getElementById('joke');
+      jokeElement.textContent = jokes[randomIndex];
+    }
+  </script>
+</body>
+</html>
