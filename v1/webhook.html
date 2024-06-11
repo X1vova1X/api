@@ -17,32 +17,33 @@
       const msg = "No webhook or content params. How to use (example): (endpoint)/webhook?content=Hello!&webhook=https://discord.com/api/webhooks/1234567890/abcdefghijklmnopqrstuvwxyz";
       parag.textContent = msg;
       // Remove the return statement here
-    }
+    } else {
 
     // Create the request payload
-    const payload = {
-      content: content
-    };
+      const payload = {
+        content: content
+      };
 
     // Send the message to the Discord webhook
-    fetch(webhook, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(payload)
-    })
-    .then(response => {
-      if (response.ok) {
-        const msg = "Sent";
-        parag.textContent = msg;
-      } else {
-        parag.textContent = "Failed";
-      }
-    })
-    .catch(error => {
-      parag.textContent = 'Error: ' + error;
-    });
+      fetch(webhook, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => {
+        if (response.ok) {
+          const msg = "Sent";
+          parag.textContent = msg;
+        } else {
+          parag.textContent = "Failed";
+        }
+      })
+      .catch(error => {
+        parag.textContent = 'Error: ' + error;
+      });
+    }
   </script>
 </body>
 </html>
